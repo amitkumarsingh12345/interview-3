@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/studata').
+mongoose.connect('mongodb+srv://amitkumarsingh1482:amit1234@document.dkfjdwr.mongodb.net/document').
   then( () => console.log("Database Created!!!")).
      catch( (error) => console.log(error));
 
-module.exports = new mongoose.model("sturec",{
+module.exports = new mongoose.model("chat",{
     name: String,
     email: String,
-    password: String
+    password: String,
+    time: String
 });     
 
 
